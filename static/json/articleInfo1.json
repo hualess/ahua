@@ -17,7 +17,7 @@
     "categoryId": "1,2,3",
     "publish": true,
     "top": true,
-    "contentFormat": "<h1 id=\"-\">关于我</h1>\r\n<p>ahua，是一名努力成长中的Java爱好者<br>以下是微信，欢迎互相交流\r\n<img src=\"/./static/img/ahua.png\" alt=\"名片.jpg\"></p>\r\n<h1 id=\"-\">关于本站</h1>\r\n<p>本站前端Vue，后台是Java\r\n项目还会持续更新，欢迎大家star,谢谢！\r\n<a href=\"https://gitee.com/liubaohua666\">&gt;&gt;点击进入</a></p>\r\n",
+    "contentFormat": "<h1 id=\"-\">关于我</h1>\r\n<p>ahua，是一名努力成长中的Java爱好者<br>以下是微信，欢迎互相交流\r\n<img src=\"./static/img/ahua.png\" alt=\"名片.jpg\"></p>\r\n<h1 id=\"-\">关于本站</h1>\r\n<p>本站前端Vue，后台是Java\r\n项目还会持续更新，欢迎大家star,谢谢！\r\n<a href=\"https://gitee.com/liubaohua666\">&gt;&gt;点击进入</a></p>\r\n",
     "categoryListStr": null,
     "tagList": [
       {
