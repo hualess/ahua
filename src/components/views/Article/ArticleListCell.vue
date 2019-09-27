@@ -5,7 +5,8 @@
         <iv-col :xs="24" :sm="24" :md="textSpan" :lg="textSpan" :order="textOrderType" style="padding-left: 0;padding-right: 0;">
           <div class="text-wrapper">
             <h4 class="title">
-              <a :href="'/article/'+article.id">{{article.title}}</a>
+              <a><router-link :to="'/article/'+article.id"> {{article.title}}</router-link></a>
+              <!--<a :href="'/article/'+article.id">{{article.title}}</a>-->
               <span class="special" v-if="article.top>0" title="置顶">置顶</span>
             </h4>
             <div class="tags">

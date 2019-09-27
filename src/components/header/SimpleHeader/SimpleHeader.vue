@@ -14,11 +14,12 @@
       <span class="motto">success belongs to the persevering</span>
     </router-link>
     <ul id="nav">
-      <li><a href="/" class="nav-link contribute">Home</a></li>
-      <li><a href="/articles" class="nav-link contribute">SpringBoot</a></li>
-      <li><a href="/articles" class="nav-link contribute">SpringCloud</a></li>
-      <li><a href="/timeline" class="nav-link contribute">时光轴</a></li>
-      <li><a href="/article/1" class="nav-link contribute">关于</a></li>
+      <li><a class="nav-link contribute"> <router-link to="/">Home</router-link></a></li>
+      <li><a class="nav-link contribute"> <router-link to="/">SpringBoot</router-link></a></li>
+      <li><a class="nav-link contribute"> <router-link to="/">SpringCloud</router-link></a></li>
+      <li><a class="nav-link contribute"> <router-link to="/timeline">时光轴</router-link></a></li>
+      <!--<li><a href="/timeline" class="nav-link contribute">时光轴</a></li>-->
+      <li><a class="nav-link contribute"> <router-link to="/">关于</router-link></a></li>
       <!--<li><a href="/articles" class="nav-link contribute">文章</a></li>
       <li><a href="/books" class="nav-link contribute">阅读</a></li>
       <li><a href="/timeline" class="nav-link contribute">时光轴</a></li>-->
