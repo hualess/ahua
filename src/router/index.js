@@ -21,7 +21,7 @@ import SearchResultContent from '@/components/content/SearchResultContent'
 Vue.use(Router)
 
 let router = new Router({
-  mode: 'history',
+  // mode: 'history',
   scrollBehavior: () => ({ y: 0 }),
   routes: [
     {
