@@ -1,0 +1,35 @@
+{
+  "msg": "success",
+  "code": 200,
+  "article": {
+    "id": 3,
+    "title": "2019Java最新面试题——Java基础（持续更新）",
+    "description": "网上找的面试题大多比较老旧，很多还是Java6以前的。现在都更新到Java11了，面试题也应该与时俱进。本文搜罗各大厂的Java面试题，力求题目从简到难，分类明确，答案详细！也借此来巩固自己的知识。",
+    "author": "Bobbi",
+    "content": "### Java基础\r\n#### 1. 两个对象的 hashCode()相同，则 equals()也一定为 true，对吗？两个对象用equals方法比较为true，它们的hashcode值相同吗？\r\n不对，两个对象的hashCode相同，equals()不一定true，equals()方法为true，他们的hashcode也不一定相同。\r\n代码实例:\r\n```java\r\nString str1 = \"通话\";\r\nString str2 = \"重地\";\r\nSystem.out.println(String.format(\"str1：%d | str2：%d\",  str1.hashCode(),str2.hashCode()));\r\nSystem.out.println(str1.equals(str2));\r\n```\r\n执行的结果： \r\n\r\nstr1：1179395 | str2：1179395\r\n\r\nfalse\r\n\r\n很显然“通话”和“重地”的 hashCode() 相同，然而 equals() 则为 false，因为在散列表中，hashCode()相等即两个键值对的哈希值相等，然而哈希值相等，并不一定能得出键值对相等。\r\n\r\n此外，两个对象用equals方法比较为true，它们的hashcode值也不一定相同\r\n下面的话来自JDK：\r\n> public int hashCode()返回该对象的哈希码值。支持此方法是为了==提高哈希表的性能==。\r\nhashCode 的常规协定是： \r\n&emsp;&emsp;在 Java 应用程序执行期间，在对同一对象多次调用hashCode 方法时，必须一致地返回相同的整数，前提是将对象进行equals比较时所用的信息没有被修改。从某一应用程序的一次执行到同一应用程序的另一次执行，该整数无需保持一致。\r\n\r\n&emsp;&emsp;如果根据 equals(Object) 方法，两个对象是相等的，那么对这两个对象中的每个对象调用 hashCode 方法都必须生成相同的整数结果。如果根据 equals(java.lang.Object) 方法，两个对象不相等，那么对这两个对象中的任一对象上调用 hashCode 方法不要求一定生成不同的整数结果。但是，程序员应该意识到，为不相等的对象生成不同整数结果可以提高哈希表的性能。\r\n\r\n**总的来说：重写equals方法时请必须重写hashcode，以保证equals方法相等时两个对象hashcode返回相同的值。如果你不按照规范来，就不一定相同了。**",
+    "readNum": 34,
+    "likeNum": 0,
+    "cover": "http://oss.dblearn.cn/dbblog/20190304/b00399e2664b4c42a3e2b4b23fcf128b.jpeg",
+    "coverType": 0,
+    "createTime": 1552122578000,
+    "updateTime": 1551713049000,
+    "recommend": true,
+    "categoryId": "9,11,12",
+    "publish": true,
+    "top": false,
+    "contentFormat": "<h3 id=\"java-\">Java基础</h3>\r\n<h4 id=\"1-hashcode-equals-true-equals-true-hashcode-\">1. 两个对象的 hashCode()相同，则 equals()也一定为 true，对吗？两个对象用equals方法比较为true，它们的hashcode值相同吗？</h4>\r\n<p>不对，两个对象的hashCode相同，equals()不一定true，equals()方法为true，他们的hashcode也不一定相同。\r\n代码实例:</p>\r\n<pre><code class=\"language-java\">String str1 = &quot;通话&quot;;\r\nString str2 = &quot;重地&quot;;\r\nSystem.out.println(String.format(&quot;str1：%d | str2：%d&quot;,  str1.hashCode(),str2.hashCode()));\r\nSystem.out.println(str1.equals(str2));</code></pre>\r\n<p>执行的结果： </p>\r\n<p>str1：1179395 | str2：1179395</p>\r\n<p>false</p>\r\n<p>很显然“通话”和“重地”的 hashCode() 相同，然而 equals() 则为 false，因为在散列表中，hashCode()相等即两个键值对的哈希值相等，然而哈希值相等，并不一定能得出键值对相等。</p>\r\n<p>此外，两个对象用equals方法比较为true，它们的hashcode值也不一定相同\r\n下面的话来自JDK：</p>\r\n<blockquote>\r\n<p>public int hashCode()返回该对象的哈希码值。支持此方法是为了==提高哈希表的性能==。\r\nhashCode 的常规协定是： \r\n&emsp;&emsp;在 Java 应用程序执行期间，在对同一对象多次调用hashCode 方法时，必须一致地返回相同的整数，前提是将对象进行equals比较时所用的信息没有被修改。从某一应用程序的一次执行到同一应用程序的另一次执行，该整数无需保持一致。</p>\r\n</blockquote>\r\n<p>&emsp;&emsp;如果根据 equals(Object) 方法，两个对象是相等的，那么对这两个对象中的每个对象调用 hashCode 方法都必须生成相同的整数结果。如果根据 equals(java.lang.Object) 方法，两个对象不相等，那么对这两个对象中的任一对象上调用 hashCode 方法不要求一定生成不同的整数结果。但是，程序员应该意识到，为不相等的对象生成不同整数结果可以提高哈希表的性能。</p>\r\n<p><strong>总的来说：重写equals方法时请必须重写hashcode，以保证equals方法相等时两个对象hashcode返回相同的值。如果你不按照规范来，就不一定相同了。</strong></p>\r\n",
+    "categoryListStr": null,
+    "tagList": [
+      {
+        "id": 7,
+        "name": "Java",
+        "type": 0
+      },
+      {
+        "id": 8,
+        "name": "面试",
+        "type": 0
+      }
+    ]
+  }
+}
