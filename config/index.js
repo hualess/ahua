@@ -48,9 +48,9 @@ module.exports = {
     index: path.resolve(__dirname, '../docs/index.html'), //之前是'../dist/index.html'
 
     // Paths
-    assetsRoot: path.resolve(__dirname, '../docs'),    // 之前是 '../dist'
-    assetsSubDirectory: 'static',
-    assetsPublicPath: './',  // 之前是 '/'
+    assetsRoot: path.resolve(__dirname, '../docs'),    // 之前是 '../dist' 打包的静态文件根路径
+    assetsSubDirectory: 'static', //静态文件存放路径
+    assetsPublicPath: './',  // 之前是 '/'  静态资源访问路径
 
     /**
      * Source Maps
